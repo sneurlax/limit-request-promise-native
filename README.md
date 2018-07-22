@@ -1,12 +1,17 @@
 `limit-request-promise-native`
 =============================
+[you21979](https://github.com/you21979)'s [limit-request-promise](https://github.com/you21979/node-limit-request-promise) library, but with [request-promise-native](https://github.com/request/request-promise-native)
 
-Note
-----
-This library is based on [you21979](https://github.com/you21979)'s [limit-request-promise](https://github.com/you21979/node-limit-request-promise) library, but uses [request-promise-native](https://github.com/request/request-promise-native)
+Getting started
+---------------
 
-Example
--------
+```
+npm install --save request
+npm install --save limit-request-promise-native
+```
+
+Usage
+-----
 
 ```
 var LimitRequestPromise = require('limit-request-promise-native');
