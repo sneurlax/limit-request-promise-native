@@ -22,12 +22,17 @@ request.setup([
     host: 'http://www.example.com',
     max: 1000,
     sec: 60
+  },
+  {
+    host: 'http://www.yahoo.co.jp',
+    max: 1,
+    sec: 1
   }
 ]);
-request.req('http://www.yahoo.co.jp').then(console.log); // immediately
-request.req('http://www.yahoo.co.jp').then(console.log); // next timing
-request.req({url:'http://www.google.com'}).then(console.log); // immediately 
-request.req({url:'http://www.google.com'}).then(console.log); // next timing
+request.req({ url:'http://www.example.com' }).then(console.log); // requests immediately 
+request.req({ url:'http://www.example.com' }).then(console.log); // requests based on timing settings
+request.req('http://www.yahoo.co.jp').then(console.log); // request immediately
+request.req('http://www.yahoo.co.jp').then(console.log); // requests 1 second later
 ```
 
 License
